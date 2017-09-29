@@ -1,0 +1,128 @@
+$primaryColor: #fff;
+$secondaryColor: #000;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body *, body *:before, body *:after { box-sizing: inherit; }
+body {
+  margin: 0px;
+  padding:0px;
+  background-color: $primaryColor;
+  text-align: center;
+}
+
+@mixin font-style {
+  color:#fff;
+  font-size: 1rem;
+  font-family: 'Roboto';
+  text-align: center;
+}
+
+.searchBody{
+  margin: 5rem;
+}
+
+.searchBar {
+  width: 100%;
+  color: #636363;
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+  border-bottom: 0.1rem solid #636363;
+  @include font-style;
+}
+
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 0.05rem solid #636363;
+}
+
+input:focus {
+  outline: none;
+  color: #636363;
+  text-shadow: 0px 0px 0px;
+}
+
+input:focus::-webkit-input-placeholder {
+  opacity: 0.1;
+}
+
+// @media only screen and (min-width: 1025px) {
+//   .searchBar {
+//     width: 80%
+//   }
+// }
+
+.searchButton {
+  width:100%;
+  border: none;
+  background-color: #4286f4;
+  border-radius: 10rem;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  @include font-style;
+  &:hover{
+    opacity:0.75
+  }
+}
+
+.weatherInformation {
+  @include font-style;
+}
+
+.loading {
+  color:#636363;
+  margin-top: 4rem;
+}
+
+.row{
+  width:100%;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:flex-end;
+}
+
+.section {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width:100%;
+  margin-top: 4rem;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 0.2rem;
+  line-height: 200%;
+  align-self: center;
+  .container {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin:1rem;
+    font-weight: normal;
+    text-align: center;
+    color:#fff;
+    letter-spacing: 5px;
+  }
+}
+
+.temp {
+  font-size: 2rem;
+  padding:0.8rem;
+}
+
+  h2 {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width:100%;
+    margin:0;
+    @include font-style;
+  }
+
+  h6 {
+    height:0;
+    margin:0;
+  }

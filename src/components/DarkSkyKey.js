@@ -1,0 +1,4 @@
+var DARKSKY_API_KEY = 'a80e218235d5764940ad9c6b5f6e8935';
+
+
+export default DARKSKY_API_KEY;
